@@ -72,6 +72,7 @@ INSTALLED_APPS = [
     'drf_spectacular',
     'core.celery.CeleryConfig',
     'user',
+    'docs'
 ]
 
 AUTH_USER_MODEL = "user.User"
@@ -374,3 +375,7 @@ if DEBUG == 0:
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 # DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Document providers credentials
+GOOGLE_CREDENTIALS = os.path.join(BASE_DIR, 'google_credentials.json')
+GOOGLE_DRIVE_ID = os.environ.get('GOOGLE_DRIVE_ID', None)
